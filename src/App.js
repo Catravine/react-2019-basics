@@ -6,6 +6,7 @@ const initialNames = [
   {firstName: "john", lastName: "johnson"},
   {firstName: "peter", lastName: "peterson"},
   {firstName: "jill", lastName: "jillson"},
+  {firstName: "mary", lastName: "scary"},
 ]
 
 function App() {
@@ -14,9 +15,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1 className="name title">Names List</h1>
-        <NameTag firstName={names[0].firstName} lastName={names[0].lastName} />
-        <NameTag firstName={names[1].firstName} lastName={names[1].lastName} />
-        <NameTag firstName={names[2].firstName} lastName={names[2].lastName} />
+        {
+          names.map( (v, i) => {
+            return <NameTag key={`${i}${v.firstName}${v.lastName}`} firstName={v.firstName} lastName={v.lastName} />;
+          })
+        }
       </header>
     </div>
   );
