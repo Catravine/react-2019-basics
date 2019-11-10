@@ -1,3 +1,5 @@
+$color: #282c34;
+
 .App {
   text-align: center;
 }
@@ -7,7 +9,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $color;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,4 +21,22 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+h1 {
+  color: red;
+}
+
+.name {
+  color: gray;
+  border: 1px solid gray;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 300px;
+}
+
+.title {
+  color: yellow;
+  border-color: yellow;
+  border-style: dotted;
 }
