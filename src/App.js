@@ -17,7 +17,11 @@ function App() {
         <h1 className="name title">Names List</h1>
         {
           names.map( (v, i) => {
-            return <NameTag key={`${i}${v.firstName}${v.lastName}`} firstName={v.firstName} lastName={v.lastName} />;
+            return <NameTag
+              key={`${i}${v.firstName}${v.lastName}`}
+              firstName={v.firstName}
+              lastName={v.lastName}
+            />;
           })
         }
       </header>
